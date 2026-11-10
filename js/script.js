@@ -18,3 +18,28 @@ let points = 0;
 
 // Задание 4. Подключите mouseleave к hoverZone.
 // Уберите класс is-hovered и верните исходный текст статуса.
+
+
+
+scoreButton.addEventListener("click", function() {
+    points++; 
+    score.textContent = points; 
+    statusElement.textContent = "Одинарный клик!"; 
+});
+
+
+doubleCard.addEventListener("dblclick", function() {
+    doubleCard.classList.toggle("is-selected"); 
+    statusElement.textContent = "Двойной клик!"; 
+});
+
+hoverZone.addEventListener("mouseenter", function() {
+    hoverZone.classList.add("is-hovered"); 
+    statusElement.textContent = "Навели курсор!"; 
+});
+
+
+hoverZone.addEventListener("mouseleave", function() {
+    hoverZone.classList.remove("is-hovered"); 
+    statusElement.textContent = "Ожидание действия."; 
+});
